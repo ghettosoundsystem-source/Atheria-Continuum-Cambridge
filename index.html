@@ -411,7 +411,7 @@
           <div class="eyebrow">Cambridge, United Kingdom • Progressive Web Apps</div>
           <h1>Fast, Offline-Ready <span>Progressive Web Apps</span> Built for Real-World Work.</h1>
           <p>
-            Atheria-Continuum Cambridge engineers lightweight software that installs straight from the browser with zero app store bloat, featuring 7-day free trials and direct Stripe licensing.
+            Atheria-Continuum Cambridge engineers lightweight software and web apps that install straight from the browser with zero app store bloat, featuring instant access and direct Stripe licensing.
           </p>
           <div class="hero-actions">
             <button class="btn-cyan" onclick="switchPage('contact')">Request Custom or White-Label Build</button>
@@ -420,10 +420,10 @@
           </div>
 
           <div class="highlights-row">
-            <div class="stat-orb"><strong>9 Live Apps</strong><span>Production PWA Suite</span></div>
+            <div class="stat-orb"><strong id="appCountOrb">11 Live Apps</strong><span>Production PWA &amp; Web Suite</span></div>
             <div class="stat-orb gold"><strong>100% Offline</strong><span>Local-First Resilience</span></div>
             <div class="stat-orb"><strong>Instant Install</strong><span>No App Store Bloat</span></div>
-            <div class="stat-orb gold"><strong>7-Day Trial</strong><span>Direct Stripe Licensing</span></div>
+            <div class="stat-orb gold"><strong>Direct Access</strong><span>Stripe &amp; Browser Ready</span></div>
           </div>
         </div>
       </section>
@@ -432,14 +432,14 @@
         <div class="container">
           <div class="kicker">Product Ecosystem</div>
           <h2>The Atheria-Continuum Suite</h2>
-          <p class="section-lead">Filter by category to launch trials or unlock full Pro access.</p>
+          <p class="section-lead">Filter by category to launch apps or unlock full access across the suite.</p>
 
           <div class="filter-pills">
-            <button class="pill-btn active" data-filter="all">All 9 Applications</button>
+            <button class="pill-btn active" data-filter="all">All Applications</button>
             <button class="pill-btn" data-filter="trades">Trades &amp; Field</button>
-            <button class="pill-btn" data-filter="family">Family &amp; Legacy</button>
-            <button class="pill-btn" data-filter="health">Health &amp; Utility</button>
-            <button class="pill-btn" data-filter="retail">Retail &amp; Seasonal</button>
+            <button class="pill-btn" data-filter="family">Family, Events &amp; Legacy</button>
+            <button class="pill-btn" data-filter="health">Health, Legal &amp; Utility</button>
+            <button class="pill-btn" data-filter="retail">Festive &amp; Seasonal</button>
           </div>
 
           <div class="fluid-grid" id="appsGrid"></div>
@@ -637,12 +637,16 @@
       { name: "ArchField Studio", category: "trades", categoryLabel: "Architecture & Survey", status: "7-Day Trial", description: "Mobile site-survey, room-dimension capture, and instant area/volume specification tool.", features: ["Rapid metric/imperial room calculations", "Client site notes & spec export", "Built for field mobile & tablet use"], appUrl: "#", stripeUrl: "#" },
       { name: "AssetShield", category: "trades", categoryLabel: "Asset Register", status: "7-Day Trial", description: "High-value asset register for electronics, antiques, vehicles, and studio equipment.", features: ["Valuation tracking & warranty alerts", "Categorized household & business vaults", "Instant export for insurers"], appUrl: "#", stripeUrl: "#" },
       { name: "Heirloom Legacy Vault", category: "family", categoryLabel: "Legacy Archive", status: "7-Day Trial", description: "Preserve family voice recordings, stories, photos, and milestones with executor protection.", features: ["Audio, video & memory capsules", "Executor release protocol", "Sovereign family storage"], appUrl: "#", stripeUrl: "#" },
-      { name: "SkillSeed", category: "family", categoryLabel: "Youth Life Skills", status: "7-Day Trial", description: "Age-tiered practical quests teaching everyday life skills with parent/teacher verification.", features: ["200+ practical quests & quizzes", "Photo & video milestone checks", "Bronze, Silver & Gold badges"], appUrl: "#", stripeUrl: "#" },
+      { name: "SkillSeed", category: "family", categoryLabel: "Youth Life Skills", status: "7-Day Trial", description: "Age-tiered practical quests teaching everyday life skills with parent/teacher verification.", features: ["Practical quests & quizzes", "Photo & video milestone checks", "Bronze, Silver & Gold badges"], appUrl: "#", stripeUrl: "#" },
+      { name: "WeddingPulse", category: "family", categoryLabel: "Events & Celebrations", status: "£29.99 / Event", description: "Zero-download browser QR guest photo and 30-second voice toast guestbook for weddings and events.", features: ["Instant QR guest access—no app install", "Disposable-style snapshots & voice toasts", "Direct £29.99 per-event Stripe pass"], appUrl: "#", stripeUrl: "#" },
       { name: "GlucoPulse", category: "health", categoryLabel: "Health & Carer Support", status: "7-Day Trial", description: "Clear blood-glucose logging, trend visibility, and carer readiness tools.", features: ["Low-friction reading & carb log", "High/low visual indicators", "Exportable summary reports"], appUrl: "#", stripeUrl: "#" },
+      { name: "SafeBite Global", category: "health", categoryLabel: "Travel & Allergy Safety", status: "£5.99 Pass", description: "Offline-ready allergy and dietary card translator for safe dining and travel.", features: ["Works offline with zero signal", "Clear allergen alerts & phrases", "Simple £5.99 single-pass unlock"], appUrl: "#", stripeUrl: "#" },
+      { name: "ProbateRoadmap UK", category: "health", categoryLabel: "UK Executor Guide", status: "£12.99 Guide", description: "Structured step-by-step UK probate and estate administration roadmap for executors and families.", features: ["Clear UK stage-by-stage checklist", "Document & task tracking", "Direct £12.99 access"], appUrl: "#", stripeUrl: "#" },
       { name: "OffGrid Comms", category: "health", categoryLabel: "Outdoor & Expedition", status: "Live Build", description: "Zero-signal campsite and expedition coordination built for offline resilience.", features: ["Works without mobile mast coverage", "Quick group status presets", "Low-battery dark interface"], appUrl: "#", stripeUrl: "#" },
-      { name: "North Pole Express", category: "retail", categoryLabel: "Festive Experience", status: "7-Day Trial", description: "Interactive advent countdown, wishlist builder, and printable Santa letters.", features: ["24-day festive advent unlocks", "Parent-approved wishlist sharing", "Print-ready Santa keepsakes"], appUrl: "#", stripeUrl: "#" },
-      { name: "ELAVÉT Wellness Hub", category: "retail", categoryLabel: "Retail Edition", status: "Brand Edition", description: "Digital storefront and wellness companion crafted for ELAVÉT in Cambridge.", features: ["Cold-pressed menu & benefits", "Bundle ordering flow", "Custom retail PWA showcase"], appUrl: "#", stripeUrl: "#" }
+      { name: "North Pole Express", category: "retail", categoryLabel: "Festive Experience", status: "7-Day Trial", description: "Interactive advent countdown, wishlist builder, behaviour chart, and printable A4 Santa letters.", features: ["Festive advent unlocks & behaviour chart", "Parent-approved wishlist sharing", "Print-ready A4 Santa letters"], appUrl: "#", stripeUrl: "#" }
     ];
+
+    document.getElementById("appCountOrb").textContent = `${apps.length} Live Apps`;
 
     let activeAppFilter = "all";
 
@@ -661,8 +665,8 @@
             <ul>${app.features.map(f => `<li>${f}</li>`).join("")}</ul>
           </div>
           <div class="app-actions">
-            <a href="${app.appUrl}" target="_blank" rel="noopener" class="action-pill action-launch">Launch Trial</a>
-            <a href="${app.stripeUrl}" target="_blank" rel="noopener" class="action-pill action-pro">Unlock Pro</a>
+            <a href="${app.appUrl}" target="_blank" rel="noopener" class="action-pill action-launch">Open App</a>
+            <a href="${app.stripeUrl}" target="_blank" rel="noopener" class="action-pill action-pro">Get Access</a>
           </div>
         </article>
       `).join("");
@@ -680,7 +684,7 @@
     const defaultPwaGallery = [
       { id: "p1", title: "ToolShield & AssetShield Suite", category: "apps", catLabel: "PWA App Mockups", desc: "Offline-ready inventory and insurance dossier tools.", imgUrl: "" },
       { id: "p2", title: "Atheria-Continuum Studio Identity", category: "branding", catLabel: "Studio Banners & Identity", desc: "Cambridge digital services studio visual system.", imgUrl: "" },
-      { id: "p3", title: "7-Day Trial & Stripe Flow", category: "trials", catLabel: "Trials & Checkout Flow", desc: "Instant browser installation with direct Pro access.", imgUrl: "" }
+      { id: "p3", title: "Instant Access & Stripe Flow", category: "trials", catLabel: "Trials & Checkout Flow", desc: "Zero-bloat browser installation with direct checkout.", imgUrl: "" }
     ];
 
     let savedPwaGallery = JSON.parse(localStorage.getItem("atheria_gallery_v2") || "[]");
